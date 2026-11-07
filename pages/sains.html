@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sains & Teknologi - Ilmupedia</title>
+  <meta name="description" content="Modul belajar, eksperimen dan fenomena Fisika, Biologi, Kimia, Astronomi, serta Teknologi Modern di Ilmupedia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="../home.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M12 7v14"/>
+            <path d="M12 2v4" stroke="#fbbf24" stroke-width="2"/>
+          </svg>
+        </div>
+        <span>Ilmupedia</span>
+        <span class="brand-badge">Sains</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Menu Navigasi">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="../home.html" class="nav-link">Beranda</a></li>
+        <li><a href="sains.html" class="nav-link active">Sains & Teknologi</a></li>
+        <li><a href="sejarah.html" class="nav-link">Sejarah & Peradaban</a></li>
+        <li><a href="matematika.html" class="nav-link">Matematika & Logika</a></li>
+        <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+        <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline theme-toggle-btn" title="Ganti Mode Gelap/Terang">🌓 Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Hero Halaman Sains -->
+  <section class="hero-section" style="background: linear-gradient(180deg, rgba(37, 99, 235, 0.08) 0%, transparent 100%);">
+    <div class="container">
+      <div class="hero-pill">
+        <span>🔬 Modul Eksplorasi Sains & Teknologi</span>
+      </div>
+      <h1 class="hero-title">Dinamika <span>Sains & Teknologi</span></h1>
+      <p class="hero-desc">Membedah hukum-hukum alam semesta dari partikel subatomik hingga galaksi raksasa, bioteknologi mutakhir, dan akselerasi kecerdasan buatan.</p>
+
+      <!-- Search Bar -->
+      <div class="search-wrapper">
+        <svg class="search-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <input type="text" class="search-input" placeholder="Cari topik sains (misal: gravitasi, DNA, entropi, AI)...">
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- Sub-bidang Pills -->
+    <div style="display:flex; gap:0.6rem; flex-wrap:wrap; margin-bottom: 2.5rem; justify-content:center;">
+      <span style="background: #2563eb; color:white; padding: 0.45rem 1.1rem; border-radius: 30px; font-size:0.85rem; font-weight:600; cursor:pointer;">Semua Sains</span>
+      <span style="background: var(--bg-card); border: 1px solid var(--border-color); color:var(--text-main); padding: 0.45rem 1.1rem; border-radius: 30px; font-size:0.85rem; font-weight:500; cursor:pointer;">⚛️ Fisika Teoretis</span>
+      <span style="background: var(--bg-card); border: 1px solid var(--border-color); color:var(--text-main); padding: 0.45rem 1.1rem; border-radius: 30px; font-size:0.85rem; font-weight:500; cursor:pointer;">🧬 Biologi & Genomik</span>
+      <span style="background: var(--bg-card); border: 1px solid var(--border-color); color:var(--text-main); padding: 0.45rem 1.1rem; border-radius: 30px; font-size:0.85rem; font-weight:500; cursor:pointer;">🧪 Kimia Material</span>
+      <span style="background: var(--bg-card); border: 1px solid var(--border-color); color:var(--text-main); padding: 0.45rem 1.1rem; border-radius: 30px; font-size:0.85rem; font-weight:500; cursor:pointer;">🔭 Astronomi & Kosmologi</span>
+      <span style="background: var(--bg-card); border: 1px solid var(--border-color); color:var(--text-main); padding: 0.45rem 1.1rem; border-radius: 30px; font-size:0.85rem; font-weight:500; cursor:pointer;">🤖 Komputasi & AI</span>
+    </div>
+
+    <!-- Modul Eksperimen Interaktif Sains -->
+    <div class="calc-card" style="border-left: 4px solid #2563eb;">
+      <h3 style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+        <span>🧲 Lab Mini: Simulasi Gaya Gravitasi Universal Newton</span>
+      </h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">
+        Hukum Gravitasi Universal menyatakan setiap partikel bermassa menarik partikel lain dengan gaya berbanding lurus dengan hasil kali kedua massa dan berbanding terbalik dengan kuadrat jaraknya:
+        <code>F = G &times; (m₁ &times; m₂) / r²</code>.
+      </p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+        <div class="form-group">
+          <label class="form-label">Massa Benda 1 (m₁ dlm kg):</label>
+          <input type="number" id="grav-m1" class="form-input" value="5.972e24">
+          <span style="font-size:0.75rem; color:var(--text-muted);">Contoh: 5.972e24 (Massa Bumi)</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Massa Benda 2 (m₂ dlm kg):</label>
+          <input type="number" id="grav-m2" class="form-input" value="70">
+          <span style="font-size:0.75rem; color:var(--text-muted);">Contoh: 70 kg (Manusia)</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Jarak Pusat Massa (r dlm meter):</label>
+          <input type="number" id="grav-r" class="form-input" value="6371000">
+          <span style="font-size:0.75rem; color:var(--text-muted);">Contoh: 6.371.000 m (Jari-jari Bumi)</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 0.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+        <button id="calc-grav-btn" class="btn btn-primary" onclick="
+          const G = 6.67430e-11;
+          const m1 = parseFloat(document.getElementById('grav-m1').value);
+          const m2 = parseFloat(document.getElementById('grav-m2').value);
+          const r = parseFloat(document.getElementById('grav-r').value);
+          const res = document.getElementById('grav-result');
+          if (m1 > 0 && m2 > 0 && r > 0) {
+            const F = (G * m1 * m2) / (r * r);
+            const g = (G * m1) / (r * r);
+            res.innerHTML = `<strong>Gaya Tarik Gravitasi (F):</strong> ${F.toFixed(2)} Newton (N)<br><strong>Percepatan Gravitasi (g):</strong> ${g.toFixed(3)} m/s²`;
+          } else {
+            res.textContent = 'Harap isi nilai massa dan jarak positif yang valid.';
+          }
+        ">Hitung Gaya Tarik & Percepatan</button>
+        <div id="grav-result" style="font-size: 0.95rem; color: #2563eb; font-weight: 500;">
+          Tekan tombol di atas untuk melihat kalkulasi fisika.
+        </div>
+      </div>
+    </div>
+
+    <!-- Daftar Artikel Sains -->
+    <div class="section-title">
+      <h2>Koleksi Modul & Artikel Sains</h2>
+      <span style="font-size: 0.88rem; color: var(--text-muted);">Kurasi Ilmiah Tepercaya</span>
+    </div>
+
+    <div class="article-grid">
+      <!-- Sains 1: Dark Matter -->
+      <a href="artikel-detail.html?id=sains-1" class="article-card searchable-item">
+        <div class="article-thumb">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80" alt="Materi Gelap">
+          <span class="badge-tag">Astronomi</span>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span>📅 8 Menit Baca</span>
+            <span>⭐ Pilihan Utama</span>
+          </div>
+          <h3 class="article-title">Misteri Materi Gelap (Dark Matter) & Struktur Kosmik Alam Semesta</h3>
+          <p class="article-snippet">Analisis mendalam mengenai kurva rotasi galaksi Vera Rubin dan bukti pelensaan gravitasi teleskop James Webb.</p>
+          <div class="article-footer-card">
+            <span>Dr. Alamsyah Pratama</span>
+            <span style="color:#2563eb; font-weight:600;">Buka Modul &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Sains 2: CRISPR -->
+      <a href="artikel-detail.html?id=sains-2" class="article-card searchable-item">
+        <div class="article-thumb">
+          <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=600&q=80" alt="CRISPR">
+          <span class="badge-tag">Bioteknologi</span>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span>📅 6 Menit Baca</span>
+            <span>Biologi Genom</span>
+          </div>
+          <h3 class="article-title">CRISPR-Cas9: Merevolusi Rekayasa Genetika dan Masa Depan Terapi</h3>
+          <p class="article-snippet">Prinsip kerja RNA pemandu dan enzim Cas9 dalam memotong sekuens nukleotida DNA dengan presisi tinggi.</p>
+          <div class="article-footer-card">
+            <span>dr. Nadia Saraswati</span>
+            <span style="color:#2563eb; font-weight:600;">Buka Modul &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Sains 3: Superkonduktor -->
+      <a href="artikel-detail.html?id=sains-3" class="article-card searchable-item">
+        <div class="article-thumb">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="Superkonduktivitas">
+          <span class="badge-tag">Fisika Material</span>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span>📅 7 Menit Baca</span>
+            <span>Kondensasi Kuanta</span>
+          </div>
+          <h3 class="article-title">Superkonduktor Suhu Ruang: Mengapa Menjadi 'Cawan Suci' Fisika Modern?</h3>
+          <p class="article-snippet">Efek Meissner, pasangan Cooper dalam teori BCS, dan tantangan tekanan tinggi pada hidrida logam.</p>
+          <div class="article-footer-card">
+            <span>Prof. Bambang Subroto</span>
+            <span style="color:#2563eb; font-weight:600;">Buka Modul &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Sains 4: Kuantum -->
+      <a href="artikel-detail.html?id=sains-4" class="article-card searchable-item">
+        <div class="article-thumb">
+          <img src="https://images.unsplash.com/photo-1507668077129-56e32842fceb?auto=format&fit=crop&w=600&q=80" alt="Komputasi Kuantum">
+          <span class="badge-tag">Fisika Kuantum</span>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span>📅 9 Menit Baca</span>
+            <span>Teori Kuantum</span>
+          </div>
+          <h3 class="article-title">Mekanika Kuantum Intuitif: Superposisi, Keterikatan (Entanglement), dan Qubit</h3>
+          <p class="article-snippet">Memahami prinsip ketidakpastian Heisenberg dan paradoks kucing Schrödinger tanpa rumus yang membingungkan.</p>
+          <div class="article-footer-card">
+            <span>Fauzan Hakim, M.Sc.</span>
+            <span style="color:#2563eb; font-weight:600;">Buka Modul &rarr;</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="color:white; margin-bottom: 1rem;">
+            <div class="brand-icon">I</div>
+            <span>Ilmupedia</span>
+          </div>
+          <p style="color: #94a3b8; font-size: 0.9rem;">
+            Menyajikan literatur sains populer berbasis bukti empiris dan kajian peer-reviewed.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Kategori</h4>
+          <ul class="footer-links">
+            <li><a href="sains.html">Sains & Teknologi</a></li>
+            <li><a href="sejarah.html">Sejarah & Peradaban</a></li>
+            <li><a href="matematika.html">Matematika & Logika</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="../home.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Lisensi</h4>
+          <p style="color: #94a3b8; font-size: 0.85rem;">CC BY-SA 4.0 Internasional.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Ilmupedia. Halaman Sains & Teknologi.</div>
+        <a href="../home.html" style="color:#94a3b8; text-decoration:none;">&larr; Kembali ke Beranda</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

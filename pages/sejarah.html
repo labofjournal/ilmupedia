@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sejarah & Peradaban - Ilmupedia</title>
+  <meta name="description" content="Dokumentasi sejarah dunia, peradaban kuno, dan rekaman sejarah Nusantara di Ilmupedia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .timeline-container {
+      position: relative;
+      padding: 1.5rem 0;
+      margin: 2rem 0;
+    }
+    .timeline-tabs {
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border-color);
+      margin-bottom: 1.5rem;
+    }
+    .timeline-tab-btn {
+      padding: 0.5rem 1rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+      font-weight: 600;
+      font-size: 0.85rem;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .timeline-tab-btn.active, .timeline-tab-btn:hover {
+      background: #d97706;
+      color: white;
+      border-color: #d97706;
+    }
+    .timeline-content-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-left: 4px solid #d97706;
+      border-radius: var(--radius-sm);
+      padding: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="../home.html" class="brand-logo">
+        <div class="brand-icon" style="background: linear-gradient(135deg, #d97706, #b45309);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M12 7v14"/>
+            <path d="M12 2v4" stroke="#fbbf24" stroke-width="2"/>
+          </svg>
+        </div>
+        <span>Ilmupedia</span>
+        <span class="brand-badge" style="background:#fef3c7; color:#b45309;">Sejarah</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Menu Navigasi">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="../home.html" class="nav-link">Beranda</a></li>
+        <li><a href="sains.html" class="nav-link">Sains & Teknologi</a></li>
+        <li><a href="sejarah.html" class="nav-link active">Sejarah & Peradaban</a></li>
+        <li><a href="matematika.html" class="nav-link">Matematika & Logika</a></li>
+        <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+        <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline theme-toggle-btn" title="Ganti Mode Gelap/Terang">🌓 Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Hero Halaman Sejarah -->
+  <section class="hero-section" style="background: linear-gradient(180deg, rgba(217, 119, 6, 0.08) 0%, transparent 100%);">
+    <div class="container">
+      <div class="hero-pill" style="background: rgba(217, 119, 6, 0.15); color: #b45309;">
+        <span>🏛️ Kronik & Dokumentasi Sejarah Peradaban</span>
+      </div>
+      <h1 class="hero-title">Jejak Langkah <span>Sejarah Peradaban</span></h1>
+      <p class="hero-desc">Menyingkap narasi masa lampau, kejayaan kerajaan-kerajaan maritim Nusantara, pusat-pusat kebudayaan dunia, serta revolusi pemikiran manusia.</p>
+
+      <!-- Search Bar -->
+      <div class="search-wrapper">
+        <svg class="search-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <input type="text" class="search-input" placeholder="Cari peristiwa sejarah, tokoh, prasasti, atau dinasti...">
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- Interactive Historical Timeline Explorer -->
+    <div class="timeline-container">
+      <div class="section-title">
+        <h2>Linimasa Kronik Sejarah (Interactive Timeline)</h2>
+        <span style="font-size:0.85rem; color:var(--text-muted);">Klik era untuk membaca rangkuman</span>
+      </div>
+
+      <div class="timeline-tabs">
+        <button class="timeline-tab-btn active" onclick="showTimeline('era-1', this)">Abad VII: Sriwijaya</button>
+        <button class="timeline-tab-btn" onclick="showTimeline('era-2', this)">Abad XIII: Majapahit</button>
+        <button class="timeline-tab-btn" onclick="showTimeline('era-3', this)">Abad III SM: Alexandria</button>
+        <button class="timeline-tab-btn" onclick="showTimeline('era-4', this)">Abad XVIII: Revolusi Industri</button>
+        <button class="timeline-tab-btn" onclick="showTimeline('era-5', this)">1945: Proklamasi RI</button>
+      </div>
+
+      <div id="era-1" class="timeline-content-card">
+        <div style="font-size:0.85rem; color:#d97706; font-weight:700;">ERA MARITIM NUSANTARA (671 - 1025 M)</div>
+        <h3 style="margin: 0.4rem 0;">Kemaharajaan Sriwijaya: Poros Maritim Asia & Universitas Buddha Dunia</h3>
+        <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7;">
+          Sriwijaya mengendalikan Selat Malaka dan Selat Sunda dengan armada laut tangguh. Pendeta Tiongkok I-Tsing mencatat lebih dari 1.000 biksu asing belajar bahasa Sanskerta dan teologi di Palembang sebelum bertolak ke Universitas Nalanda, India.
+        </p>
+        <div style="margin-top:1rem;">
+          <a href="artikel-detail.html?id=sejarah-1" class="btn btn-outline" style="font-size:0.85rem;">Baca Kajian Lengkap Sriwijaya &rarr;</a>
+        </div>
+      </div>
+
+      <div id="era-2" class="timeline-content-card" style="display:none;">
+        <div style="font-size:0.85rem; color:#d97706; font-weight:700;">ERA EMAS NUSANTARA (1293 - 1527 M)</div>
+        <h3 style="margin: 0.4rem 0;">Imperium Majapahit: Sumpah Palapa Mahapatih Gajah Mada</h3>
+        <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7;">
+          Didirikan oleh Raden Wijaya pasca pengusiran ekspedisi Mongol Kublai Khan. Di bawah Hayam Wuruk dan Gajah Mada, kitab Negarakretagama mencatat wilayah pengaruh luas meliputi kepulauan Nusantara, Semenanjung Melayu, dan hubungan dagang dengan Campa serta Ayutthaya.
+        </p>
+      </div>
+
+      <div id="era-3" class="timeline-content-card" style="display:none;">
+        <div style="font-size:0.85rem; color:#d97706; font-weight:700;">ERA HELLENISTIK (283 SM)</div>
+        <h3 style="margin: 0.4rem 0;">Perpustakaan Kuno Alexandria: Episentrum Ilmu Pengetahuan Dunia Kuno</h3>
+        <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7;">
+          Didirikan oleh Dinasti Ptolemaios di Mesir, menyimpan ratusan ribu gulungan papirus karya Eratosthenes, Archimedes, dan Euklides. Menjadi lambang hasrat manusia purba mengumpulkan seluruh ilmu semesta dalam satu atap.
+        </p>
+        <div style="margin-top:1rem;">
+          <a href="artikel-detail.html?id=sejarah-2" class="btn btn-outline" style="font-size:0.85rem;">Baca Kajian Lengkap Alexandria &rarr;</a>
+        </div>
+      </div>
+
+      <div id="era-4" class="timeline-content-card" style="display:none;">
+        <div style="font-size:0.85rem; color:#d97706; font-weight:700;">ERA MODERN AWAL (1760 - 1840 M)</div>
+        <h3 style="margin: 0.4rem 0;">Revolusi Industri: Penemuan Mesin Uap dan Transformasi Peradaban Buruh</h3>
+        <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7;">
+          Peralihan radikal dari tenaga otot dan hewan ke mesin uap James Watt memicu ledakan urbanisasi, pembangunan jalur kereta api lintas benua, dan kelahiran sistem ekonomi kapitalis modern.
+        </p>
+      </div>
+
+      <div id="era-5" class="timeline-content-card" style="display:none;">
+        <div style="font-size:0.85rem; color:#d97706; font-weight:700;">ERA KEMERDEKAAN (17 AGUSTUS 1945)</div>
+        <h3 style="margin: 0.4rem 0;">Detik-Detik Proklamasi Kemerdekaan Republik Indonesia</h3>
+        <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7;">
+          Peristiwa Rengasdengklok yang digerakkan pemuda, penyusunan naskah otentik di kediaman Laksamana Maeda, hingga pembacaan teks oleh Soekarno-Hatta di Pegangsaan Timur 56 Jakarta yang mengawali kedaulatan bangsa.
+        </p>
+      </div>
+    </div>
+
+    <!-- Artikel Sejarah Grid -->
+    <div class="section-title">
+      <h2>Daftar Arsip Artikel Sejarah</h2>
+      <span style="font-size:0.88rem; color:var(--text-muted);">Diperiksa dari Sumber Primer & Prasasti</span>
+    </div>
+
+    <div class="article-grid">
+      <!-- Sejarah 1: Sriwijaya -->
+      <a href="artikel-detail.html?id=sejarah-1" class="article-card searchable-item">
+        <div class="article-thumb">
+          <img src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?auto=format&fit=crop&w=600&q=80" alt="Sriwijaya">
+          <span class="badge-tag">Nusantara Kuno</span>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span>📅 7 Menit Baca</span>
+            <span>Prasasti Nalanda</span>
+          </div>
+          <h3 class="article-title">Kemaharajaan Sriwijaya: Penguasa Jalur Rempah Selat Malaka & Pusat Ilmu Buddha</h3>
+          <p class="article-snippet">Kajian prasasti Telaga Batu, Kedukan Bukit, dan diplomasi maritim dengan Dinasti Tang.</p>
+          <div class="article-footer-card">
+            <span>Ki Bagus Suryo</span>
+            <span style="color:#d97706; font-weight:600;">Baca Arsip &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Sejarah 2: Alexandria -->
+      <a href="artikel-detail.html?id=sejarah-2" class="article-card searchable-item">
+        <div class="article-thumb">
+          <img src="https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=600&q=80" alt="Alexandria">
+          <span class="badge-tag">Peradaban Kuno</span>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span>📅 8 Menit Baca</span>
+            <span>Mesir Kuno</span>
+          </div>
+          <h3 class="article-title">Tragedi Perpustakaan Alexandria: Hilangnya Ribuan Gulungan Ilmu Kuno</h3>
+          <p class="article-snippet">Analisis historiografi mengenai kebakaran era Julius Caesar, Aurelian, hingga dekrit Teofilus.</p>
+          <div class="article-footer-card">
+            <span>Maya Saraswati, M.Hum.</span>
+            <span style="color:#d97706; font-weight:600;">Baca Arsip &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Sejarah 3: Aksara Lontara -->
+      <a href="artikel-detail.html?id=sejarah-3" class="article-card searchable-item">
+        <div class="article-thumb">
+          <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=600&q=80" alt="Naskah Kuno">
+          <span class="badge-tag">Filologi Nusantara</span>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span>📅 6 Menit Baca</span>
+            <span>Maritim Bugis</span>
+          </div>
+          <h3 class="article-title">Naskah Kuno I La Galigo: Epik Terpanjang di Dunia dan Kearifan Laut Bugis</h3>
+          <p class="article-snippet">Karya sastra adiluhung yang melampaui panjang epos Mahabharata, merekam navigasi bintang dan kosmologi maritim.</p>
+          <div class="article-footer-card">
+            <span>Andi Tenri, S.S.</span>
+            <span style="color:#d97706; font-weight:600;">Baca Arsip &rarr;</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="color:white; margin-bottom: 1rem;">
+            <div class="brand-icon" style="background:#d97706;">S</div>
+            <span>Ilmupedia Sejarah</span>
+          </div>
+          <p style="color: #94a3b8; font-size: 0.9rem;">
+            Menjaga memori kolektif sejarah dan peradaban untuk refleksi masa depan.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Kategori</h4>
+          <ul class="footer-links">
+            <li><a href="sains.html">Sains & Teknologi</a></li>
+            <li><a href="sejarah.html">Sejarah & Peradaban</a></li>
+            <li><a href="matematika.html">Matematika & Logika</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="../home.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Lisensi</h4>
+          <p style="color: #94a3b8; font-size: 0.85rem;">CC BY-SA 4.0 Internasional.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Ilmupedia. Halaman Sejarah & Peradaban.</div>
+        <a href="../home.html" style="color:#94a3b8; text-decoration:none;">&larr; Kembali ke Beranda</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function showTimeline(id, btn) {
+      document.querySelectorAll('.timeline-content-card').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.timeline-tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(id).style.display = 'block';
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>

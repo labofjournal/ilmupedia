@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubungi Kami & Kirim Naskah - Ilmupedia</title>
+  <meta name="description" content="Formulir kontak, pengiriman naskah artikel, saran perbaikan, dan kolaborasi riset edukasi di Ilmupedia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="../home.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M12 7v14"/>
+            <path d="M12 2v4" stroke="#fbbf24" stroke-width="2"/>
+          </svg>
+        </div>
+        <span>Ilmupedia</span>
+        <span class="brand-badge">Kontak</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Menu Navigasi">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="../home.html" class="nav-link">Beranda</a></li>
+        <li><a href="sains.html" class="nav-link">Sains & Teknologi</a></li>
+        <li><a href="sejarah.html" class="nav-link">Sejarah & Peradaban</a></li>
+        <li><a href="matematika.html" class="nav-link">Matematika & Logika</a></li>
+        <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+        <li><a href="kontak.html" class="nav-link active">Kontak</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline theme-toggle-btn" title="Ganti Mode Gelap/Terang">🌓 Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Hero Halaman Kontak -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-pill">
+        <span>✉️ Ruang Partisipasi & Umpan Balik</span>
+      </div>
+      <h1 class="hero-title">Hubungi Kami & <span>Kirim Naskah</span></h1>
+      <p class="hero-desc">Punya pertanyaan, koreksi naskah ilmiah, atau ingin berkontribusi menulis modul artikel di Ilmupedia? Kami menyambut antusiasme Anda.</p>
+    </div>
+  </section>
+
+  <main class="container" style="padding-bottom: 5rem;">
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:2.5rem; margin-top:2rem;">
+      
+      <!-- Kolom Formulir -->
+      <div class="calc-card" style="box-shadow:var(--shadow-md);">
+        <h3 style="margin-bottom:0.5rem; font-size:1.35rem;">Formulir Pengirim Pesan</h3>
+        <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:1.5rem;">
+          Silakan lengkapi formulir di bawah ini. Tim kami biasanya merespons dalam waktu 1-2 hari kerja.
+        </p>
+
+        <!-- Pesan Sukses -->
+        <div id="contact-feedback" style="display:none; padding:1rem; background:#ecfdf5; border:1px solid #10b981; color:#065f46; border-radius:var(--radius-sm); margin-bottom:1.25rem; font-size:0.9rem;">
+          Pesan berhasil dikirim!
+        </div>
+
+        <form id="contact-form">
+          <div class="form-group">
+            <label class="form-label">Nama Lengkap:</label>
+            <input type="text" class="form-input" placeholder="Nama Anda atau nama institusi" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Alamat Email:</label>
+            <input type="email" class="form-input" placeholder="contoh: nama@domain.com" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Kategori Keperluan:</label>
+            <select class="form-select" required>
+              <option value="">-- Pilih Jenis Pesan --</option>
+              <option value="kontribusi">Kirim Naskah Artikel Baru</option>
+              <option value="koreksi">Koreksi Data / Rujukan Ilmiah (Erata)</option>
+              <option value="pertanyaan">Pertanyaan Konten & Materi</option>
+              <option value="kolaborasi">Kerja Sama Edukasi & Penelitian</option>
+              <option value="lainnya">Masukan Umum / Lainnya</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Subjek / Judul Pesan:</label>
+            <input type="text" class="form-input" placeholder="Ringkasan topik Anda" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Isi Pesan / Abstrak Naskah:</label>
+            <textarea class="form-textarea" rows="5" placeholder="Tuliskan pesan lengkap atau tautan draft Google Docs / naskah artikel Anda beserta daftar pustakanya..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; padding:0.75rem;">Kirimkan Pesan Sekarang &rarr;</button>
+        </form>
+      </div>
+
+      <!-- Kolom Info Kontak & Panduan Penulis -->
+      <div>
+        <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:1.75rem; margin-bottom:1.5rem;">
+          <h3 style="margin-bottom:1rem; font-size:1.2rem;">Panduan Kirim Naskah Ilmupedia</h3>
+          <ul style="font-size:0.9rem; color:var(--text-muted); line-height:1.7; margin-left:1.25rem;">
+            <li><strong>Orisinalitas:</strong> Naskah wajib karya asli penulis dan belum pernah dipublikasikan di media lain.</li>
+            <li><strong>Rujukan Valid:</strong> Sertakan minimal 2 rujukan dari jurnal ilmiah, buku akademik, atau dokumen primer.</li>
+            <li><strong>Format Panjang:</strong> 800 - 2.500 kata dilengkapi sub-heading terstruktur dan visual pendukung yang berlisensi terbuka.</li>
+            <li><strong>Tanpa Biaya:</strong> Ilmupedia bersifat nirlaba; proses kurasi dan publikasi sepenuhnya bebas biaya.</li>
+          </ul>
+        </div>
+
+        <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:1.75rem;">
+          <h3 style="margin-bottom:1rem; font-size:1.2rem;">Saluran Komunikasi Langsung</h3>
+          
+          <div style="margin-bottom:1rem; display:flex; gap:0.75rem; align-items:flex-start;">
+            <span style="font-size:1.2rem;">📧</span>
+            <div>
+              <div style="font-weight:600; font-size:0.92rem;">Surel Redaksi:</div>
+              <div style="font-size:0.88rem; color:var(--text-muted);">redaksi@ilmupedia.id / labofjournal@gmail.com</div>
+            </div>
+          </div>
+
+          <div style="margin-bottom:1rem; display:flex; gap:0.75rem; align-items:flex-start;">
+            <span style="font-size:1.2rem;">🏛️</span>
+            <div>
+              <div style="font-weight:600; font-size:0.92rem;">Sekretariat Ilmupedia:</div>
+              <div style="font-size:0.88rem; color:var(--text-muted);">Kompleks Laboratorium Literasi Ilmiah Nusantara, Indonesia</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:0.75rem; align-items:flex-start;">
+            <span style="font-size:1.2rem;">🌐</span>
+            <div>
+              <div style="font-weight:600; font-size:0.92rem;">Repositori GitHub:</div>
+              <div style="font-size:0.88rem; color:var(--text-muted);">Tersedia siap deploy untuk GitHub Pages</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="color:white; margin-bottom: 1rem;">
+            <div class="brand-icon">I</div>
+            <span>Ilmupedia</span>
+          </div>
+          <p style="color: #94a3b8; font-size: 0.9rem;">
+            Menyambut kontribusi dan kerja sama dari pendidik, mahasiswa, dan masyarakat umum.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Kategori</h4>
+          <ul class="footer-links">
+            <li><a href="sains.html">Sains & Teknologi</a></li>
+            <li><a href="sejarah.html">Sejarah & Peradaban</a></li>
+            <li><a href="matematika.html">Matematika & Logika</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="../home.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Lisensi</h4>
+          <p style="color: #94a3b8; font-size: 0.85rem;">CC BY-SA 4.0 Internasional.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Ilmupedia. Halaman Kontak & Partisipasi.</div>
+        <a href="../home.html" style="color:#94a3b8; text-decoration:none;">&larr; Kembali ke Beranda</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

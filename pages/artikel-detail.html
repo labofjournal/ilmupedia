@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Misteri Materi Gelap & Struktur Kosmik - Ilmupedia</title>
+  <meta name="description" content="Baca artikel lengkap sains, sejarah, dan matematika di Ilmupedia. Menyajikan pemaparan komprehensif, rumus ilmiah, dan diskusi pembaca.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="../home.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M12 7v14"/>
+            <path d="M12 2v4" stroke="#fbbf24" stroke-width="2"/>
+          </svg>
+        </div>
+        <span>Ilmupedia</span>
+        <span class="brand-badge">Artikel</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Menu Navigasi">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="../home.html" class="nav-link">Beranda</a></li>
+        <li><a href="sains.html" class="nav-link">Sains & Teknologi</a></li>
+        <li><a href="sejarah.html" class="nav-link">Sejarah & Peradaban</a></li>
+        <li><a href="matematika.html" class="nav-link">Matematika & Logika</a></li>
+        <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+        <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline theme-toggle-btn" title="Ganti Mode Gelap/Terang">🌓 Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" style="padding-bottom: 5rem;">
+
+    <!-- Breadcrumbs & Reader Controls -->
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-top:2rem; padding-bottom:1rem; border-bottom:1px solid var(--border-color);">
+      <div style="font-size:0.88rem; color:var(--text-muted);">
+        <a href="../home.html" style="color:var(--text-muted); text-decoration:none;">Beranda</a> &rsaquo; 
+        <span id="article-breadcrumb-cat">Sains & Astronomi</span> &rsaquo; 
+        <span style="color:var(--text-main); font-weight:600;">Detail Artikel</span>
+      </div>
+
+      <!-- Reader Tools -->
+      <div style="display:flex; gap:0.5rem; align-items:center;">
+        <span style="font-size:0.8rem; color:var(--text-muted); margin-right:0.25rem;">Ukuran Huruf:</span>
+        <button id="btn-font-decrease" class="btn btn-outline" style="padding:0.25rem 0.6rem; font-size:0.8rem;" title="Perkecil Font">A-</button>
+        <button id="btn-font-increase" class="btn btn-outline" style="padding:0.25rem 0.6rem; font-size:0.8rem;" title="Perbesar Font">A+</button>
+        <button id="btn-bookmark" class="btn btn-outline" style="padding:0.25rem 0.75rem; font-size:0.8rem;">☆ Simpan</button>
+        <button id="btn-speech" class="btn btn-outline" style="padding:0.25rem 0.75rem; font-size:0.8rem;">🔊 Dengarkan</button>
+      </div>
+    </div>
+
+    <!-- Article Header -->
+    <div class="article-header">
+      <div style="display:flex; gap:0.5rem; margin-bottom:0.75rem;">
+        <span id="article-category-badge" class="badge-tag" style="position:static; display:inline-block; background:#2563eb;">Sains & Kosmologi</span>
+        <span style="font-size:0.8rem; background:rgba(37,99,235,0.08); color:#2563eb; padding:0.25rem 0.6rem; border-radius:15px; font-weight:600;">Peer-Reviewed</span>
+      </div>
+
+      <h1 id="article-title" class="article-title-lg">Misteri Materi Gelap (Dark Matter) dan Nasib Akhir Struktur Alam Semesta</h1>
+      <p id="article-subtitle" style="font-size:1.15rem; color:var(--text-muted); line-height:1.6;">
+        Menyingkap komponen tak kasat mata yang menyusun 85% massa materi kosmos, bukti pelensaan gravitasi, serta perdebatan teori gravitasi modifikasi.
+      </p>
+
+      <div class="author-box">
+        <img id="author-img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Penulis" class="author-avatar">
+        <div>
+          <div style="font-weight:700; font-size:0.95rem;" id="author-name">Dr. Alamsyah Pratama, Ph.D.</div>
+          <div style="font-size:0.8rem; color:var(--text-muted);" id="author-bio">Peneliti Astrofisika Observasional & Dosen Tamu Institut Astronomi</div>
+        </div>
+        <div style="margin-left:auto; text-align:right; font-size:0.8rem; color:var(--text-muted);">
+          <div>Dipublikasikan: <span id="article-date">4 November 2026</span></div>
+          <div>Estimasi Waktu: <span id="article-readtime">8 Menit Baca</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Banner Image -->
+    <div style="max-width:800px; margin:0 auto 2.5rem; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-md);">
+      <img id="article-hero-img" src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" alt="Ilustrasi Materi Gelap" style="width:100%; max-height:420px; object-fit:cover;">
+      <div style="padding:0.6rem 1rem; background:var(--bg-card); border-top:1px solid var(--border-color); font-size:0.8rem; color:var(--text-muted); font-style:italic;">
+        Gambar 1.0: Simulasi superkomputer distribusi jaring filamen kosmik (Cosmic Web) dan halo materi gelap di alam semesta.
+      </div>
+    </div>
+
+    <!-- Reading Content (Body) -->
+    <article id="article-content" class="reading-content">
+      <p>
+        Ketika kita menatap langit malam bertabur bintang, mata manusia dan bahkan teleskop optik terhebat hanya menangkap sebagian sangat kecil dari realitas fisik. Seluruh bintang, planet, debu nebula, dan galaksi yang tampak hanyalah sekitar <strong>5%</strong> dari total massa-energi alam semesta. Sisanya didominasi oleh dua entitas misterius: <em>Materi Gelap (Dark Matter)</em> sekitar 27%, dan <em>Energi Gelap (Dark Energy)</em> sekitar 68%.
+      </p>
+
+      <h2>1. Anomali Kurva Rotasi Galaksi Vera Rubin</h2>
+      <p>
+        Pada dekade 1970-an, astronom perintis <strong>Vera Rubin</strong> dan koleganya Kent Ford mengukur kecepatan orbit bintang-bintang di tepi luar galaksi spiral, seperti Galaksi Andromeda. Berdasarkan mekanika klasik Newton dan hukum gravitasi universal:
+      </p>
+
+      <div class="math-formula-box">
+        v(r) = &radic;[ (G &times; M(r)) / r ]
+      </div>
+
+      <p>
+        Bila sebagian besar massa galaksi terkonsentrasi di bagian pusat (seperti tata surya kita di mana Matahari memegang 99.8% massa), maka kecepatan bintang-bintang di pinggiran galaksi semestinya menurun secara drastis seiring bertambahnya jarak $r$. Namun, hasil observasi spektral Vera Rubin mengejutkan dunia: <strong>kecepatan rotasi bintang di pinggiran galaksi tetap datar (flat rotation curve)</strong>.
+      </p>
+
+      <blockquote>
+        &ldquo;Satu-satunya penjelasan fisik yang masuk akal adalah galaksi dikelilingi oleh halo massa tak kasat mata yang masif dan menyebar jauh melampaui piringan bintang yang tampak.&rdquo; &mdash; Vera Rubin
+      </blockquote>
+
+      <h2>2. Fenomena Pelensaan Gravitasi (Gravitational Lensing)</h2>
+      <p>
+        Teori Relativitas Umum Albert Einstein (1915) memprediksi bahwa massa melengkungkan ruang-waktu di sekitarnya. Ketika cahaya dari galaksi latar belakang yang sangat jauh melintasi gugus galaksi masif, lintasannya terbelokkan bagaikan melintasi lensa optik raksasa.
+      </p>
+
+      <div style="background:var(--bg-card); border:1px solid var(--border-color); padding:1.25rem; border-radius:var(--radius-sm); margin:1.5rem 0;">
+        <h4 style="margin-bottom:0.5rem; font-family:var(--font-sans);">📌 Bukti Tak Terbantahkan: Gugus Peluru (Bullet Cluster)</h4>
+        <p style="font-size:0.95rem; margin-bottom:0;">
+          Ketika dua gugus galaksi saling bertubrukan (1E 0657-56), gas panas biasa saling bertabrakan dan melambat karena tekanan elektromagnetik (terdeteksi sinar-X oleh Observatorium Chandra). Namun, peta pelensaan gravitasi menunjukkan mayoritas massa gugus melintas bebas tanpa hambatan. Ini membuktikan bahwa materi gelap berinteraksi sangat lemah (non-baryonic), mengesampingkan teori bahwa fenomena ini sekadar debu dingin biasa.
+        </p>
+      </div>
+
+      <h2>3. Kandidat Partikel: WIMPs, Axion, atau Graviton?</h2>
+      <p>
+        Para fisikawan partikel di fasilitas bawah tanah seperti Laboratorium Gran Sasso (XENONnT) di Italia dan LUX-ZEPLIN di Amerika Serikat terus berburu deteksi langsung partikel materi gelap. Dua kandidat paling menjanjikan adalah:
+      </p>
+
+      <ul style="margin-left: 1.5rem; margin-bottom: 1.5rem;">
+        <li><strong>WIMPs (Weakly Interacting Massive Particles):</strong> Partikel hipotetis berbobot puluhan hingga ratusan kali massa proton yang hanya berinteraksi melalui gravitasi dan gaya nuklir lemah.</li>
+        <li><strong>Axion:</strong> Partikel subatomik ultraringgan yang awalnya diajukan Roberto Peccei dan Helen Quinn untuk menyelesaikan masalah CP kuat dalam kromodinamika kuantum (QCD).</li>
+      </ul>
+
+      <h2>4. Kesimpulan dan Implikasi Kosmologis</h2>
+      <p>
+        Memahami hakikat materi gelap bukan sekadar memecahkan teka-teki teoretis; ia menentukan takdir akhir kosmos kita. Apakah alam semesta akan terus berekspansi selamanya dalam skenario <em>Big Freeze</em>, ataukah kerapatan massa akan memicu pembalikan ekspansi? Jawabannya terletak pada partikel tak kasat mata yang merajut kerangka kosmik ini.
+      </p>
+    </article>
+
+    <!-- Daftar Pustaka / Referensi Ilmiah -->
+    <div style="max-width:800px; margin:2.5rem auto 0; padding-top:1.5rem; border-top:1px solid var(--border-color);">
+      <h4 style="margin-bottom:0.75rem; font-size:1rem;">Daftar Pustaka & Rujukan Ilmiah</h4>
+      <ol style="font-size:0.85rem; color:var(--text-muted); margin-left:1.25rem; line-height:1.7;">
+        <li>Rubin, V. C., & Ford, W. K. (1970). Rotation of the Andromeda Nebula from a Spectroscopic Survey of Emission Regions. <em>The Astrophysical Journal</em>, 159, 379.</li>
+        <li>Clowe, D., et al. (2006). A Direct Empirical Proof of the Existence of Dark Matter. <em>The Astrophysical Journal Letters</em>, 648(2), L109.</li>
+        <li>Planck Collaboration (2020). Planck 2018 results: VI. Cosmological parameters. <em>Astronomy & Astrophysics</em>, 641, A6.</li>
+      </ol>
+    </div>
+
+    <!-- Kolom Komentar & Diskusi -->
+    <div class="comment-box">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
+        <h3>Diskusi & Komentar Pembaca</h3>
+        <span style="font-size:0.85rem; color:var(--text-muted);">Moderasi Terbuka</span>
+      </div>
+
+      <!-- Form Tambah Komentar -->
+      <form id="comment-form" style="margin-bottom:2rem;">
+        <div class="form-group">
+          <label class="form-label">Nama Anda / Peneliti:</label>
+          <input type="text" id="comment-name" class="form-input" placeholder="Masukkan nama atau inisial..." required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Pertanyaan atau Tanggapan:</label>
+          <textarea id="comment-text" class="form-textarea" rows="3" placeholder="Tulis masukan, kritik ilmiah, atau pertanyaan mengenai materi ini..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="font-size:0.88rem;">Kirim Tanggapan</button>
+      </form>
+
+      <!-- Daftar Komentar Dinamis -->
+      <div id="comments-list">
+        <!-- Rendered via JS -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="color:white; margin-bottom: 1rem;">
+            <div class="brand-icon">I</div>
+            <span>Ilmupedia</span>
+          </div>
+          <p style="color: #94a3b8; font-size: 0.9rem;">
+            Platform bacaan ilmiah dengan verifikasi data dan format terstruktur.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Kategori</h4>
+          <ul class="footer-links">
+            <li><a href="sains.html">Sains & Teknologi</a></li>
+            <li><a href="sejarah.html">Sejarah & Peradaban</a></li>
+            <li><a href="matematika.html">Matematika & Logika</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="../home.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Lisensi</h4>
+          <p style="color: #94a3b8; font-size: 0.85rem;">CC BY-SA 4.0 Internasional.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Ilmupedia. Halaman Baca Artikel Ilmiah.</div>
+        <a href="../home.html" style="color:#94a3b8; text-decoration:none;">&larr; Kembali ke Beranda</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

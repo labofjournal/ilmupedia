@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="book-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="50%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+    <linearGradient id="page-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f1f5f9" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded Background Container -->
+  <rect width="32" height="32" rx="8" fill="url(#book-grad)" />
+
+  <!-- Open Book Shape -->
+  <!-- Left Page -->
+  <path d="M 6 10 C 10 9, 14 10.5, 15.2 12 L 15.2 24 C 13.8 22.8, 10 21.5, 6 22.5 Z" fill="url(#page-grad)" />
+  <!-- Right Page -->
+  <path d="M 26 10 C 22 9, 18 10.5, 16.8 12 L 16.8 24 C 18.2 22.8, 22 21.5, 26 22.5 Z" fill="url(#page-grad)" />
+
+  <!-- Center Book Spine / Seam -->
+  <line x1="16" y1="11.5" x2="16" y2="24.5" stroke="#3b82f6" stroke-width="1.2" stroke-linecap="round" />
+
+  <!-- Page Lines (Left Page) -->
+  <path d="M 8.5 13.5 C 10.5 13, 12.5 13.8, 13.5 14.5" fill="none" stroke="#93c5fd" stroke-width="0.9" stroke-linecap="round" />
+  <path d="M 8.5 16.5 C 10.5 16, 12.5 16.8, 13.5 17.5" fill="none" stroke="#93c5fd" stroke-width="0.9" stroke-linecap="round" />
+  <path d="M 8.5 19.5 C 10.5 19, 12.5 19.8, 13.5 20.5" fill="none" stroke="#93c5fd" stroke-width="0.9" stroke-linecap="round" />
+
+  <!-- Page Lines (Right Page) -->
+  <path d="M 23.5 13.5 C 21.5 13, 19.5 13.8, 18.5 14.5" fill="none" stroke="#93c5fd" stroke-width="0.9" stroke-linecap="round" />
+  <path d="M 23.5 16.5 C 21.5 16, 19.5 16.8, 18.5 17.5" fill="none" stroke="#93c5fd" stroke-width="0.9" stroke-linecap="round" />
+  <path d="M 23.5 19.5 C 21.5 19, 19.5 19.8, 18.5 20.5" fill="none" stroke="#93c5fd" stroke-width="0.9" stroke-linecap="round" />
+
+  <!-- Golden Bookmark Ribbon -->
+  <path d="M 16 7 L 16 11" stroke="#fbbf24" stroke-width="1.5" stroke-linecap="round" />
+  <!-- Small Star Sparkle at Top -->
+  <circle cx="16" cy="6" r="1.2" fill="#fef08a" />
+</svg>

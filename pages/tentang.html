@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tentang Kami - Ilmupedia</title>
+  <meta name="description" content="Visi, misi, dan dewan kurator Ilmupedia dalam memajukan literasi sains, sejarah, dan matematika di Indonesia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="../home.html" class="brand-logo">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M12 7v14"/>
+            <path d="M12 2v4" stroke="#fbbf24" stroke-width="2"/>
+          </svg>
+        </div>
+        <span>Ilmupedia</span>
+        <span class="brand-badge">Tentang</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Menu Navigasi">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="../home.html" class="nav-link">Beranda</a></li>
+        <li><a href="sains.html" class="nav-link">Sains & Teknologi</a></li>
+        <li><a href="sejarah.html" class="nav-link">Sejarah & Peradaban</a></li>
+        <li><a href="matematika.html" class="nav-link">Matematika & Logika</a></li>
+        <li><a href="tentang.html" class="nav-link active">Tentang</a></li>
+        <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline theme-toggle-btn" title="Ganti Mode Gelap/Terang">🌓 Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Hero Halaman Tentang -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-pill">
+        <span>📖 Menyalakan Api Keingintahuan Ilmiah</span>
+      </div>
+      <h1 class="hero-title">Mengenal <span>Ilmupedia</span></h1>
+      <p class="hero-desc">Platform ensiklopedia terbuka yang menghubungkan nalar saintifik, kearifan sejarah, dan keindahan matematika untuk seluruh masyarakat Indonesia.</p>
+    </div>
+  </section>
+
+  <main class="container" style="padding-bottom: 5rem;">
+
+    <!-- Visi & Misi Cards -->
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:2rem; margin:2rem 0 3.5rem;">
+      <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:2rem; box-shadow:var(--shadow-sm); border-top:4px solid #2563eb;">
+        <div style="font-size:2rem; margin-bottom:1rem;">🎯</div>
+        <h3 style="margin-bottom:0.75rem; font-size:1.35rem;">Visi Kami</h3>
+        <p style="color:var(--text-muted); line-height:1.7; font-size:0.95rem;">
+          Menjadi rujukan ensiklopedia pengetahuan berbahasa Indonesia terdepan yang independen, akurat, dan dapat diakses bebas oleh setiap insan pembelajar di seluruh pelosok Nusantara tanpa batas finansial.
+        </p>
+      </div>
+
+      <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:2rem; box-shadow:var(--shadow-sm); border-top:4px solid #0d9488;">
+        <div style="font-size:2rem; margin-bottom:1rem;">🚀</div>
+        <h3 style="margin-bottom:0.75rem; font-size:1.35rem;">Misi Utama</h3>
+        <ul style="color:var(--text-muted); line-height:1.7; font-size:0.95rem; margin-left:1.25rem;">
+          <li>Menyajikan artikel sains, sejarah, dan matematika yang diuji silang dengan sumber primer dan jurnal bereputasi.</li>
+          <li>Mengembangkan simulasi dan kalkulator interaktif agar konsep abstrak menjadi intuitif dan menarik.</li>
+          <li>Mendokumentasikan kearifan peradaban Nusantara agar tetap lestari dan relevan di era modern.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Nilai-Nilai Inti (Core Values) -->
+    <div class="section-title">
+      <h2>Prinsip & Nilai Integritas Kami</h2>
+      <span style="font-size:0.88rem; color:var(--text-muted);">Fondasi Komunitas Akademik</span>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1.5rem; margin-bottom:4rem;">
+      <div style="background:var(--bg-card); border:1px solid var(--border-color); padding:1.5rem; border-radius:var(--radius-sm);">
+        <h4 style="margin-bottom:0.4rem; color:#2563eb;">1. Ketepatan Fakta & Verifikasi</h4>
+        <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.6;">Setiap klaim ilmiah dan sejarah disertai catatan kaki dan rujukan literatur yang valid.</p>
+      </div>
+      <div style="background:var(--bg-card); border:1px solid var(--border-color); padding:1.5rem; border-radius:var(--radius-sm);">
+        <h4 style="margin-bottom:0.4rem; color:#0d9488;">2. Bahasa yang Membumi</h4>
+        <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.6;">Menghilangkan jargon rumit tanpa mengurangi kedalaman makna substansi ilmiah.</p>
+      </div>
+      <div style="background:var(--bg-card); border:1px solid var(--border-color); padding:1.5rem; border-radius:var(--radius-sm);">
+        <h4 style="margin-bottom:0.4rem; color:#d97706;">3. Netralitas & Bebas Bias</h4>
+        <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.6;">Menghargai keberagaman metodologi riset dan menghindari prasangka ideologis.</p>
+      </div>
+      <div style="background:var(--bg-card); border:1px solid var(--border-color); padding:1.5rem; border-radius:var(--radius-sm);">
+        <h4 style="margin-bottom:0.4rem; color:#16a34a;">4. Akses Terbuka (Open Knowledge)</h4>
+        <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.6;">Pengetahuan adalah hak asasi universal yang harus dibagikan secara sukarela.</p>
+      </div>
+    </div>
+
+    <!-- Tim Kurator & Redaksi -->
+    <div id="tim" class="section-title">
+      <h2>Dewan Redaksi & Kurator Ahli</h2>
+      <span style="font-size:0.88rem; color:var(--text-muted);">Mitra Akademisi & Peneliti</span>
+    </div>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.75rem;">
+      <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:1.5rem; text-align:center;">
+        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Kurator Sains" style="width:90px; height:90px; border-radius:50%; object-fit:cover; margin:0 auto 1rem;">
+        <h4 style="margin-bottom:0.25rem;">Dr. Alamsyah Pratama</h4>
+        <div style="font-size:0.82rem; color:#2563eb; font-weight:600; margin-bottom:0.5rem;">Kurator Bidang Sains & Astronomi</div>
+        <p style="font-size:0.85rem; color:var(--text-muted);">Doktor Astrofisika dengan spesialisasi pelensaan gravitasi dan pembentukan struktur kosmik.</p>
+      </div>
+
+      <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:1.5rem; text-align:center;">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80" alt="Kurator Sejarah" style="width:90px; height:90px; border-radius:50%; object-fit:cover; margin:0 auto 1rem;">
+        <h4 style="margin-bottom:0.25rem;">Ki Bagus Suryo, M.Hum.</h4>
+        <div style="font-size:0.82rem; color:#d97706; font-weight:600; margin-bottom:0.5rem;">Kurator Bidang Sejarah & Filologi</div>
+        <p style="font-size:0.85rem; color:var(--text-muted);">Peneliti prasasti kuno Nusantara dan sejarawan maritim peradaban Asia Tenggara.</p>
+      </div>
+
+      <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:var(--radius-md); padding:1.5rem; text-align:center;">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Kurator Matematika" style="width:90px; height:90px; border-radius:50%; object-fit:cover; margin:0 auto 1rem;">
+        <h4 style="margin-bottom:0.25rem;">Dra. Ratna Kusuma, M.Sc.</h4>
+        <div style="font-size:0.82rem; color:#16a34a; font-weight:600; margin-bottom:0.5rem;">Kurator Bidang Matematika & Logika</div>
+        <p style="font-size:0.85rem; color:var(--text-muted);">Pengajar aljabar murni dan pengembang kurikulum penalaran geometri intuitif.</p>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="color:white; margin-bottom: 1rem;">
+            <div class="brand-icon">I</div>
+            <span>Ilmupedia</span>
+          </div>
+          <p style="color: #94a3b8; font-size: 0.9rem;">
+            Menjunjung tinggi etika penyebaran ilmu pengetahuan demi kemaslahatan bersama.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Kategori</h4>
+          <ul class="footer-links">
+            <li><a href="sains.html">Sains & Teknologi</a></li>
+            <li><a href="sejarah.html">Sejarah & Peradaban</a></li>
+            <li><a href="matematika.html">Matematika & Logika</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="../home.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="kontak.html">Kontak & Naskah</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Lisensi</h4>
+          <p style="color: #94a3b8; font-size: 0.85rem;">CC BY-SA 4.0 Internasional.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Ilmupedia. Halaman Tentang Kami.</div>
+        <a href="../home.html" style="color:#94a3b8; text-decoration:none;">&larr; Kembali ke Beranda</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

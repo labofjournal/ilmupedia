@@ -1,0 +1,67 @@
+name: Publish Ilmupedia to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+
+  # Memungkinkan workflow dijalankan secara manual dari tab Actions di GitHub
+  workflow_dispatch:
+
+# Mengatur izin untuk GITHUB_TOKEN agar dapat melakukan deploy ke GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Hanya mengizinkan satu deploy bersamaan, menghindari konflik race-condition
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      # Menetapkan index.html sebagai halaman utama resmi di GitHub Pages
+      # dan secara otomatis mengalihkan (redirect instan) pengunjung langsung ke home.html
+      - name: Tetapkan index.html sebagai halaman utama dan redirect otomatis ke home.html
+        run: |
+          echo "Menyiapkan index.html sebagai entry point utama dengan pengalihan otomatis ke home.html..."
+          cat << 'EOF' > index.html
+          <!DOCTYPE html>
+          <html lang="id">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="refresh" content="0; url=home.html">
+            <link rel="canonical" href="home.html">
+            <title>Ilmupedia - Mengalihkan ke Halaman Utama...</title>
+            <script type="text/javascript">
+              // Redirect instan ke home.html dengan mempertahankan parameter pencarian atau hash jika ada
+              window.location.replace("home.html" + window.location.search + window.location.hash);
+            </script>
+          </head>
+          <body>
+            <p>Mengarahkan ke <a href="home.html">Halaman Utama Ilmupedia (home.html)</a>...</p>
+          </body>
+          </html>
+          EOF
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Mengunggah seluruh direktori root (termasuk index.html, home.html, css/, js/, pages/)
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

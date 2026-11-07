@@ -1,0 +1,6 @@
+{
+  "name": "Ilmupedia - Portal Edukasi & Ensiklopedia Pengetahuan",
+  "description": "Platform edukasi dan ensiklopedia interaktif untuk Sains & Teknologi, Sejarah & Peradaban, Matematika & Logika, serta artikel edukatif mendalam.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

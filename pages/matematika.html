@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matematika & Logika - Ilmupedia</title>
+  <meta name="description" content="Konsep matematika murni & terapan, formula, kalkulator interaktif, dan pembahasan soal di Ilmupedia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="../home.html" class="brand-logo">
+        <div class="brand-icon" style="background: linear-gradient(135deg, #16a34a, #059669);">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" fill="currentColor" fill-opacity="0.2"/>
+            <path d="M12 7v14"/>
+            <path d="M12 2v4" stroke="#fbbf24" stroke-width="2"/>
+          </svg>
+        </div>
+        <span>Ilmupedia</span>
+        <span class="brand-badge" style="background:#f0fdf4; color:#16a34a;">Matematika</span>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Menu Navigasi">☰</button>
+
+      <ul class="nav-links">
+        <li><a href="../home.html" class="nav-link">Beranda</a></li>
+        <li><a href="sains.html" class="nav-link">Sains & Teknologi</a></li>
+        <li><a href="sejarah.html" class="nav-link">Sejarah & Peradaban</a></li>
+        <li><a href="matematika.html" class="nav-link active">Matematika & Logika</a></li>
+        <li><a href="tentang.html" class="nav-link">Tentang</a></li>
+        <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline theme-toggle-btn" title="Ganti Mode Gelap/Terang">🌓 Mode</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Banner Hero Halaman Matematika -->
+  <section class="hero-section" style="background: linear-gradient(180deg, rgba(22, 163, 74, 0.08) 0%, transparent 100%);">
+    <div class="container">
+      <div class="hero-pill" style="background: rgba(22, 163, 74, 0.15); color: #15803d;">
+        <span>📐 Keindahan Bahasa Alam Semesta</span>
+      </div>
+      <h1 class="hero-title">Matematika & <span>Logika Murni</span></h1>
+      <p class="hero-desc">Mengeksplorasi pembuktian anggun, pola fraktal, teori himpunan tak hingga, serta laboratorium kalkulator interaktif untuk memecahkan formula secara cepat.</p>
+
+      <!-- Search Bar -->
+      <div class="search-wrapper">
+        <svg class="search-icon-svg" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+        <input type="text" class="search-input" placeholder="Cari konsep matematika (misal: Pythagoras, matriks, limit, fibonacci)...">
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- Laboratorium Kalkulator Interaktif -->
+    <div class="section-title">
+      <h2>Laboratorium & Kalkulator Interaktif</h2>
+      <span style="font-size:0.88rem; color:var(--text-muted);">Hitung Rumus Langsung di Browser</span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
+      
+      <!-- Kalkulator 1: Pythagoras -->
+      <div class="calc-card" style="border-top: 4px solid #16a34a;">
+        <h3 style="margin-bottom: 0.5rem; font-size: 1.2rem;">📐 Kalkulator Teorema Pythagoras</h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem;">
+          Hitung sisi miring (hipotenusa) segitiga siku-siku: <code>a² + b² = c²</code>.
+        </p>
+
+        <div class="form-group">
+          <label class="form-label">Panjang Sisi Alas (a):</label>
+          <input type="number" id="side-a" class="form-input" value="3" min="0.1" step="any">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Panjang Sisi Tegak (b):</label>
+          <input type="number" id="side-b" class="form-input" value="4" min="0.1" step="any">
+        </div>
+
+        <button id="calc-pyth-btn" class="btn btn-primary" style="width:100%; margin-top:0.5rem;">Hitung Hipotenusa (c)</button>
+
+        <div id="pyth-result" style="margin-top: 1rem; padding: 0.75rem; background: var(--bg-main); border-radius: var(--radius-sm); font-size: 0.9rem; color: #15803d; font-weight:600;">
+          Hipotenusa (c): 5.00 satuan (3² + 4² = 25)
+        </div>
+      </div>
+
+      <!-- Kalkulator 2: Persamaan Kuadrat & Diskriminan -->
+      <div class="calc-card" style="border-top: 4px solid #0d9488;">
+        <h3 style="margin-bottom: 0.5rem; font-size: 1.2rem;">⚡ Akar Persamaan Kuadrat (ax² + bx + c = 0)</h3>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 1rem;">
+          Mencari nilai diskriminan <code>D = b² - 4ac</code> dan akar-akar solusi x.
+        </p>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem;">
+          <div class="form-group">
+            <label class="form-label">Koef. a:</label>
+            <input type="number" id="quad-a" class="form-input" value="1">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Koef. b:</label>
+            <input type="number" id="quad-b" class="form-input" value="-5">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Konst. c:</label>
+            <input type="number" id="quad-c" class="form-input" value="6">
+          </div>
+        </div>
+
+        <button id="calc-quad-btn" class="btn btn-primary" style="width:100%; margin-top:0.5rem; background: #0d9488;">Cari Solusi Akar</button>
+
+        <div id="quad-result" style="margin-top: 1rem; padding: 0.75rem; background: var(--bg-main); border-radius: var(--radius-sm); font-size: 0.9rem; color: #0d9488; font-weight:600;">
+          Diskriminan (D) = 1 (D > 0)<br>x₁ = 3.000, x₂ = 2.000
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Artikel Matematika Grid -->
+    <div class="section-title">
+      <h2>Artikel & Konsep Matematika Pilihan</h2>
+      <span style="font-size:0.88rem; color:var(--text-muted);">Dari Fondasi Dasar hingga Logika Tinggi</span>
+    </div>
+
+    <div class="article-grid">
+      <!-- Card 1: Rasio Emas -->
+      <a href="artikel-detail.html?id=matematika-1" class="article-card searchable-item">
+        <div class="article-thumb">
+          <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?auto=format&fit=crop&w=600&q=80" alt="Rasio Emas">
+          <span class="badge-tag">Geometri & Aljabar</span>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span>📅 5 Menit Baca</span>
+            <span>Konstanta &phi; = 1.618...</span>
+          </div>
+          <h3 class="article-title">Pesona Rasio Emas (&phi;): Harmoni Angka dalam Spiral Alam dan Seni</h3>
+          <p class="article-snippet">Hubungan deret Fibonacci dengan proporsi rasio emas pada spiral cangkang nautilus hingga lukisan Mona Lisa.</p>
+          <div class="article-footer-card">
+            <span>Dra. Ratna Kusuma</span>
+            <span style="color:#16a34a; font-weight:600;">Pelajari &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 2: Paradoks Hilbert -->
+      <a href="artikel-detail.html?id=matematika-2" class="article-card searchable-item">
+        <div class="article-thumb">
+          <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=600&q=80" alt="Paradoks Hilbert">
+          <span class="badge-tag">Teori Himpunan</span>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span>📅 6 Menit Baca</span>
+            <span>Kardinalitas Aleph</span>
+          </div>
+          <h3 class="article-title">Paradoks Hotel Hilbert: Sifat Mengejutkan dari Himpunan Tak Hingga</h3>
+          <p class="article-snippet">Mengapa hotel penuh dengan tak hingga kamar masih mampu menampung tak hingga rombongan tamu baru?</p>
+          <div class="article-footer-card">
+            <span>Arya Wicaksana, M.Sc.</span>
+            <span style="color:#16a34a; font-weight:600;">Pelajari &rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Card 3: Teorema Terakhir Fermat -->
+      <a href="artikel-detail.html?id=matematika-3" class="article-card searchable-item">
+        <div class="article-thumb">
+          <img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?auto=format&fit=crop&w=600&q=80" alt="Persamaan Fermat">
+          <span class="badge-tag">Teori Bilangan</span>
+        </div>
+        <div class="article-body">
+          <div class="article-meta">
+            <span>📅 7 Menit Baca</span>
+            <span>Persamaan Diophantine</span>
+          </div>
+          <h3 class="article-title">Teka-Teki Teorema Terakhir Fermat: Perjalanan 358 Tahun Pembuktian Andrew Wiles</h3>
+          <p class="article-snippet">Catatan pinggir Pierre de Fermat pada tahun 1637 yang memicu lahirnya cabang geometri aritmatika modern.</p>
+          <div class="article-footer-card">
+            <span>Prof. Dr. Suwandi</span>
+            <span style="color:#16a34a; font-weight:600;">Pelajari &rarr;</span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-logo" style="color:white; margin-bottom: 1rem;">
+            <div class="brand-icon" style="background:#16a34a;">M</div>
+            <span>Ilmupedia Matematika</span>
+          </div>
+          <p style="color: #94a3b8; font-size: 0.9rem;">
+            Membangun nalar analitis dan ketajaman berpikir logis melalui matematika.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Kategori</h4>
+          <ul class="footer-links">
+            <li><a href="sains.html">Sains & Teknologi</a></li>
+            <li><a href="sejarah.html">Sejarah & Peradaban</a></li>
+            <li><a href="matematika.html">Matematika & Logika</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="../home.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Lisensi</h4>
+          <p style="color: #94a3b8; font-size: 0.85rem;">CC BY-SA 4.0 Internasional.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Ilmupedia. Halaman Matematika & Logika.</div>
+        <a href="../home.html" style="color:#94a3b8; text-decoration:none;">&larr; Kembali ke Beranda</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
